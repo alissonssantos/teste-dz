@@ -1,0 +1,278 @@
+//FONT
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../font/RobotoLight.eot');
+    src: url('../font/RobotoLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/RobotoLight.woff2') format('woff2'),
+        url('../font/RobotoLight.woff') format('woff'),
+        url('../font/RobotoLight.ttf') format('truetype'),
+        url('../font/RobotoLight.svg#RobotoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('../font/RobotoRegular.eot');
+    src: url('../font/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+        url('../font/RobotoRegular.woff2') format('woff2'),
+        url('../font/RobotoRegular.woff') format('woff'),
+        url('../font/RobotoRegular.ttf') format('truetype'),
+        url('../font/RobotoRegular.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../font/RobotoBold.eot');
+    src: url('../font/RobotoBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/RobotoBold.woff2') format('woff2'),
+        url('../font/RobotoBold.woff') format('woff'),
+        url('../font/RobotoBold.ttf') format('truetype'),
+        url('../font/RobotoBold.svg#RobotoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// 1. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom.
+html {
+    -webkit-text-size-adjust: 100%; // 1
+    -ms-text-size-adjust: 100%; // 1
+    color: $base-font-color;
+    font-family: $font;
+    font-size: $base-font-size - 4px;
+    letter-spacing: 1px;
+    line-height: $base-line-height;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $ms-small) {
+        font-size: $base-font-size - 3px;
+    }
+
+    @media screen and (min-width: $ms-mid) {
+        font-size: $base-font-size;
+    }
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+// Address style set to 'bolder' in Firefox 4+, Safari, and Chrome.
+b,
+strong {
+    font-family: $font-bold;
+}
+
+// Address odd 'em'-unit font size rendering in all browsers.
+// Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace;
+}
+
+del,
+s {
+    text-decoration: line-through;
+}
+
+// Address styling not present in Safari and Chrome.
+dfn {
+    font-style: italic;
+}
+
+em,
+i {
+    font-style: normal;
+    font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    display: block;
+    line-height: $heading-line-height;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+// Address differences between Firefox and other browsers.
+hr {
+    @include box-sizing(content-box);
+
+    border-bottom: $base-border;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    height: 0;
+    margin: $base-spacing 0;
+}
+
+// Addresses styling not present in IE 8/9.
+mark {
+    background-color: rgba(255, 221, 0, 1);
+    color: $black;
+}
+
+p {
+    @include user-select(text);
+
+    margin: 0 0 $base-spacing 0;
+    position: relative;
+}
+
+// Contain overflow in all browsers.
+pre {
+    overflow: auto;
+}
+
+// Address inconsistent and variable font size in all browsers.
+small {
+    font-size: 80%;
+}
+
+span {
+    position: relative;
+}
+
+var {
+    font-style: normal;
+}
+
+// TITLES
+.title1,
+.title2,
+.title-int2,
+.title4 {
+    @include letter-spacing(1px);
+
+    font-family: $heading-font-family;
+    font-weight: 100;
+}
+
+
+.title1 {
+    @include calc-rem(27px);
+    margin: 0 auto 20px auto;
+
+    @media screen and (min-width: $ms-small) {
+        @include calc-rem(37px);
+        @include letter-spacing(3px);
+
+        margin: 0 auto 70px auto;
+    }
+}
+
+.title2,
+.title-int2 {
+    @include calc-rem(25px);
+    margin: 0 auto 10px auto;
+
+    @media screen and (min-width: $ms-small) {
+        @include calc-rem(35px);
+        @include letter-spacing(3px);
+
+        margin: 0 auto 40px auto;
+    }
+}
+
+.title3 {
+    @include calc-rem(14px);
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media screen and (min-width: $ms-small) {
+        @include calc-rem(18px);
+
+        margin-bottom: 30px;
+    }
+}
+
+.title4 {
+    @include calc-rem(18px);
+     margin: 0 auto 40px auto;
+}
+
+.title-int2 {
+    color: $white;
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.title-line,
+.title-line-left {
+    &:after {
+        background-color: $color-primary;
+        content: '';
+        display: block;
+        height: 3px;
+        margin: 20px auto 0 auto;
+        position: relative;
+        width: 40px;
+    }
+}
+
+.title-line-left {
+    margin: 0 0 40px 0;
+    
+    &:after {
+        margin: 20px 0 0 0;
+    }
+}
+
+.title-line-exp {
+    &:after {
+        background-color: $white;
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 30px auto 0 auto;
+        position: relative;
+        width: 100%;
+    }
+}
+
+.title-construtoras-parceiras {
+    @include calc-rem(18px);
+
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+
+    &.title-line {
+        &:after {
+            background-color: $gray-light;
+            height: 1px;
+            margin: 30px auto;
+            width: 100%;
+        }
+    }
+}
+
+.title-property {
+    @include calc-rem(24px);
+
+    color: $color-primary;
+}

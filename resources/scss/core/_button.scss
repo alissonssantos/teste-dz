@@ -1,0 +1,175 @@
+#{$all-buttons} {
+    @include appearance(button);
+
+    background-color: transparent;
+    cursor: pointer;
+    letter-spacing: $base-letter-spacing;
+    overflow: visible;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-anexo {
+    @include calc-rem(14px);
+    @include transition(background-color $base-duration $base-timing);
+    
+    background-color: $color-primary;
+    color: $white;
+    height: 45px;
+    letter-spacing: $base-letter-spacing;
+    padding: (($button-padding / 2) + 0.5) $button-padding;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+
+    @include responsive($width: $ms-mid) {
+        @include calc-rem(12px);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: $gray-light;
+        }
+    }
+    
+    &:hover,
+    &.active {
+        background-color: $color-secondary;
+    }
+
+    &.btn-border {
+        @include box-shadow(inset 0 0 0 2px $color-primary);
+        @include transition(all $base-duration $base-timing);
+        
+        background-color: transparent;
+        color: $white;
+        
+        &:hover,
+        &.active {
+            @include box-shadow(inset 0 0 0 0 $color-primary);
+            
+            background-color: $color-primary;
+
+            svg {
+                fill: $white;
+            }
+        }
+
+        svg {
+            fill: $color-primary;
+        }
+    }
+
+    svg {
+        @include transition(fill $base-duration $base-timing);
+
+        fill: $white;
+        margin-bottom: 4px;
+    }
+}
+
+.btn-secondary {
+    height: 42px;
+    padding: 12px 5%;
+
+    &.btn-border {
+        @include box-shadow(inset 0 0 0 1px $gray-light);
+        @include transition(all $base-duration $base-timing);
+        
+        background-color: $white;
+        color: $gray-medium;
+        
+        &:hover,
+        &.active {
+            @include box-shadow(inset 0 0 0 0 $gray-light);
+            
+            background-color: $color-primary;
+            color: $white;
+        }
+    }
+}
+
+.btn-anexo {
+    background-color: $gray-dark2;
+
+    &:hover,
+    &.active {
+        @include box-shadow(inset 0 0 0 3px $gray-dark2);
+        
+        background-color: $white;
+        color: $gray-dark2;
+
+        svg {
+            fill: $gray-dark2;
+        }
+    }
+}
+
+.btn-close {
+    &:hover {
+        svg {
+            @include scale();
+
+            fill: $color-primary;
+        }
+    }
+
+    svg {
+        @include scale(0.6, 0.6);
+        @include transform-origin();
+        @include transition(all $base-duration $base-timing);
+
+        fill: $black;
+    }
+}
+
+.btn-map-satellite,
+.btn-map-roadmap {
+    float: left;
+    margin: 3px;
+}
+
+.btn-map-zoom-less,
+.btn-map-zoom-plus {
+    display: inline-block;
+    height: 20px;
+    letter-spacing: 0;
+    padding: 0;
+    vertical-align: baseline;
+    width: 25px;
+}
+
+.btn-properties-category {
+    &:after {
+        $size: 10px;
+
+        @include opacity(0);
+        @include resize($size);
+        @include rotate(45deg);
+        @include transform-origin();
+        @include transition(opacity $base-duration $base-timing);
+
+        background-color: $white;
+        bottom: -5px;
+        content: '';
+        left: calc(50% - (#{$size} / 2));
+        position: absolute;
+    }
+    
+    &:hover,
+    &.active {
+        &:after {
+            @include opacity();
+
+            background-color: $color-primary;
+        }
+    }
+}

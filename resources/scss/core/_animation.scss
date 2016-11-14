@@ -1,0 +1,19 @@
+@include keyframes(fade) {
+    0% {
+        @include opacity();
+    }
+
+    100% {
+        @include opacity(0);
+    }
+}
+
+@include keyframes(rotation) {
+    0% {
+        @include rotate(0deg);
+    }
+
+    100% {
+        @include rotate(360deg);
+    }
+}

@@ -1,0 +1,170 @@
+body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+footer,
+header,
+main {
+    width: 100%;
+    clear: both;
+}
+
+main {
+   background-color: $color-primary; 
+
+   section {
+       margin: 0 auto; 
+       position: relative; 
+       width: 100%;
+       padding: 50px 0;
+       
+
+       @include responsive($ms-small) {};
+       @include responsive($ms-mid) {
+           width: 1006px;
+       };
+
+       h1, h2 {
+          font-family: 'RobotoBold';
+
+          &:after{
+               content: '';
+               display: block;
+               height: 8px;
+               width: calc(10% + 40px);
+               margin-left: 32vw;
+               margin-top: 20px;
+               margin-bottom: 60px;
+           } 
+       }
+
+       h1 {
+           @include calc-rem(40px);
+
+           &:after{
+               background-color: $color-secondary;
+           }
+       }
+
+       h2 {
+           @include calc-rem(40px);
+
+           &:after{
+               background-color: $color-tertiary;
+           }
+       }
+
+       h3 {
+           @include calc-rem(22px);
+           
+           font-family: 'RobotoBold';
+           padding: 30px 0;
+       }
+
+       p {
+           @include calc-rem(16px);
+
+           font-family: 'RobotoLight';
+           text-align: center;
+       }
+
+       .engloba-foto {
+            @include border-radius(50%);
+
+            border: $ampler-border;
+            width: 100%;
+            height: 260px;
+            padding: 5px;
+
+            .cont-foto {
+               @include border-radius(50%);
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-size: cover;
+            }
+       }
+   }
+}
+
+.btn {
+    @include calc-rem(14px);
+
+    background: $color-tertiary;
+    color: $white;
+    font-family: 'RobotoRegular';
+
+    &.btn-effects, 
+    &.btn-effects-form  {
+        @include transition(all $base-duration $base-timing);
+
+        margin : 0 auto;
+        padding: 18px 0;
+        position: relative;
+        text-align: center;
+        width: 130px;
+        cursor: pointer;
+    }
+
+    &.btn-effects  {
+        @include box-shadow(inset 0 0 0 0 $color-secondary);
+
+        &:hover{
+            @include box-shadow(inset 50vw 2px 0 0 $color-secondary);
+        }
+    }
+
+    &.btn-effects-form  {
+        @include box-shadow(inset 0 0 0 0 $color-quaternary);
+        margin: 25px auto;
+
+        &:hover{
+            @include box-shadow(inset 50vw 2px 0 0 $color-quaternary);
+        }
+    }
+} 
+
+.col-1, 
+.col-2, 
+.col-3, 
+.col-4, 
+.col-5, 
+.col-6, 
+.col-7 {
+    display: inline-table;
+    float: left;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.col-1 {
+    @include responsive($ms-mid) {
+        width:33.33%;
+    };
+
+    &.margin {
+        padding: 0 30px;
+    }
+}
+
+.col-2 {
+    @include responsive($ms-mid) {
+        width:66.66%;
+    };
+}
+
+.col-3 {
+    @include responsive($ms-mid) {
+        width:50%;
+    };
+
+    &.margin {
+        padding: 0 30px;
+    }
+}
+
+
+.clear {clear: both;}

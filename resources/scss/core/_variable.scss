@@ -1,0 +1,78 @@
+// Text
+$font: 'RobotoRegular';
+$font-thin: 'RobotoLight';
+$font-bold: 'RobotoBold';
+$heading-font-family: $font;
+$base-font-size: 16px;
+$base-letter-spacing: 1px;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-margin: 140px;
+$base-padding: 3vw;
+$base-spacing: 20px;
+$header-height: 110px;
+$header-height-mobile: 80px;
+$small-spacing: $base-spacing / 4;
+
+// Colors
+$color-primary: rgba(246, 246, 247, 1);
+$color-secondary: rgba(56, 193, 200, 1);
+$color-tertiary: rgba(163, 207, 83, 1);
+$color-quaternary: rgba(101, 101, 101, 1);
+$color-quinary: rgba(38, 57, 89, 1);
+
+// Generic Colors
+$black: rgba(0, 0, 0, 1);
+$black-transparent: rgba(0, 0, 0, 0.7);
+$black-transparent2: rgba(0, 0, 0, 0.9);
+$gray: rgba(40, 40, 40, 1);
+$gray-dark: rgba(54, 61, 64, 1);
+$gray-dark2: rgba(115, 115, 115, 1);
+$gray-light: rgba(219, 219, 219, 1);
+$gray-light2: rgba(189, 185, 185, 1);
+$gray-medium: rgba(85, 94, 100, 1);
+$gray-medium2: rgba(172, 172, 172, 1);
+$white: rgba(255, 255, 255, 1);
+
+// Background Color
+$base-background-color: $white;
+
+// Font Color
+$base-font-color: $gray-dark2;
+
+// Border
+$base-border-color: $white;
+$base-border: 2px solid $base-border-color;
+
+$base-border-color-hover: $color-tertiary;
+$base-border-hover: 2px solid $base-border-color-hover;
+
+$base-border-ampler: $color-secondary;
+$ampler-border: 8px solid $base-border-ampler;
+
+// Buttons
+$all-buttons: ('button', 'input[type="button"]', 'input[type="reset"]', 'input[type="submit"]');
+$button-padding: 30px;
+
+// Forms
+$all-text-inputs: ('input[type="text"]', 'input[type="password"]', 'select[multiple="multiple"]', 'textarea');
+$form-box-shadow: inset 0 0 0 1px $base-border-color;
+$form-box-shadow-focus: inset 0 0 0 1px $color-primary;
+$form-box-shadow2: inset 0 0 0 1px $gray-light;
+$form-box-shadow-focus2: inset 0 0 0 1px $gray-dark2;
+$input-margin: 5px;
+$input-padding: 20px;
+$input-placeholder-color: $gray-medium2;
+
+// Animations
+$base-duration: 300ms;
+$base-timing: ease-in-out;
+
+// Media Screen
+$ms-small: 48em;
+$ms-mid: 64em;
+$ms-large: 75em;
